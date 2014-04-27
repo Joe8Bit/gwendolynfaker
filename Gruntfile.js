@@ -428,15 +428,92 @@ module.exports = function (grunt) {
                         options: {
                             verify: true
                         },
-                        src: 'dist/images/**/*',
+                        src: 'dist/images/*',
                         dest: 'images/'
                     },
                     {
                         options: {
                             verify: true
                         },
-                        src: 'dist/images/*',
-                        dest: 'images/'
+                        src: 'dist/images/illustration/*',
+                        dest: 'images/illustration/'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/images/installation/*',
+                        dest: 'images/installation'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/images/painting/*',
+                        dest: 'images/painting'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/images/photography/*',
+                        dest: 'images/photography/'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/images/style/*',
+                        dest: 'images/style/'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/bio/index.html',
+                        dest: 'bio/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/index.html',
+                        dest: 'gallery/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/illustration/index.html',
+                        dest: 'gallery/illustration/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/installation/index.html',
+                        dest: 'gallery/installation/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/painting/index.html',
+                        dest: 'gallery/painting/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/photography/index.html',
+                        dest: 'gallery/photography/index.html'
+                    },
+                    {
+                        options: {
+                            verify: true
+                        },
+                        src: 'dist/gallery/style/index.html',
+                        dest: 'gallery/style/index.html'
                     }
                 ]
             }
