@@ -223,7 +223,16 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: '<%= config.app %>/index.html'
+            html: [
+                '<%= config.app %>/index.html',
+                '<%= config.app %>/bio/index.html',
+                '<%= config.app %>/gallery/index.html',
+                '<%= config.app %>/gallery/illustration/index.html',
+                '<%= config.app %>/gallery/installation/index.html',
+                '<%= config.app %>/gallery/painting/index.html',
+                '<%= config.app %>/gallery/photography/index.html',
+                '<%= config.app %>/gallery/style/index.html'
+            ]
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -231,7 +240,16 @@ module.exports = function (grunt) {
             options: {
                 assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
             },
-            html: ['<%= config.dist %>/{,*/}*.html'],
+            html: [
+                '<%= config.dist %>/{,*/}*.html',
+                '<%= config.dist %>/bio/index.html',
+                '<%= config.dist %>/gallery/index.html',
+                '<%= config.dist %>/gallery/illustration/index.html',
+                '<%= config.dist %>/gallery/installation/index.html',
+                '<%= config.dist %>/gallery/painting/index.html',
+                '<%= config.dist %>/gallery/photography/index.html',
+                '<%= config.dist %>/gallery/style/index.html'
+            ],
             css: ['<%= config.dist %>/styles/{,*/}*.css']
         },
 
@@ -273,7 +291,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= config.dist %>',
-                    src: '{,*/}*.html',
+                    src: ['{,*/}*.html', 'bio/index.html', 'gallery/**/*.html'],
                     dest: '<%= config.dist %>'
                 }]
             }
@@ -318,7 +336,9 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'bio/*',
+                        'gallery/**/*'
                     ]
                 }]
             },
@@ -481,6 +501,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
+        'build',
         's3'
     ]);
 };
