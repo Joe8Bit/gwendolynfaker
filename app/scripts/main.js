@@ -17,13 +17,14 @@ Gallery.prototype.handleClick = function (e) {
 };
 
 Gallery.prototype.bindPopup = function () {
-	var boundClosePopup = this.closePopup.bind(this);
+	this.boundClosePopup = this.closePopup.bind(this);
 	this.$popup = $('.popup');
-	this.$popup.find('.close').on('click', boundClosePopup);
+	this.$popup.find('.close').on('click', this.boundClosePopup);
 };
 
 Gallery.prototype.closePopup = function () {
 	this.$popup.remove();
+	this.$popup.find('.close').off('click', this.boundClosePopup);
 };
 
 $(document).ready(function () {
