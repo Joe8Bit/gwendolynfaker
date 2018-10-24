@@ -21,11 +21,11 @@ However, the code within this project whose purpose is the functioning of a gall
 
 Then open your browser at [http://0.0.0.0:9000/](http://0.0.0.0:9000/)
 
-####Testing
+#### Testing
 
     grunt test
 
-####Deploying
+#### Deploying
 
 The site is designed to be deployed to S3 and distributed via Cloudfront. In order to set this up, you need to add the following file (`config/aws.json`):
 
